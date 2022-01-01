@@ -3,7 +3,7 @@ CookEggs
 
 Öncelikle xml kısmında 3 adet yumurta resmi ve 3 adet butonumuzu yerleştirdik
 Yumurta resimlerine göre undercooked 5 Minute, mediumcooked 8 minute, overcooked 12 minute, belirledik
-Daha sonra MainActivity kkısmında kullanıcının hangi yumurtayı seçecegine göre tıklanınca ne olacagı olayları yazdık
+Daha sonra MainActivity kısmında kullanıcının hangi yumurtayı seçecegine göre tıklanınca ne olacagı olayları yazdık
 Tıklanılan yumurta ile bir sonraki activity ekranına geçilir ve geçilirken anahtar kelime ile veri gönderilir
 Sonra geçilen activity ekranında gelen anahtar kelimenin verisine göre geri sayımın kaçtan başlatılacagını belirliyoruz
 CountDownTimer methodunu saniye olarak hesabımızı yapıyoruz
