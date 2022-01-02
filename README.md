@@ -74,6 +74,10 @@ var currentSecond = (millisUntilFinished % 60000) / 1000
 ```
 onTick fonksiyonunun içinde saniye ve dakikayı yukarıda görüldüğü gibi hesaplıyoruz.
 
+> app > res > values 
+
+klasörü içinde oluşturduğumuz renkleri TimerBackgrondColor fonksiyonu ile when() koşuluyla istenilen dakikalarda arka plan rengimizi belirliyoruz.
+
 Bir diger CountDownTimera ait fonksiyon olan onFinish içinde ise geri sayımımız bitince ne olmasını istiyorsak onu yazıyoruz.
 Geri sayım bitiminde alarm çalması için öncelikle mp3 uzantılı dosyamızı 
 > app > res > raw 
