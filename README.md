@@ -53,6 +53,39 @@ Tekrar fonksiyona dönecek olursak, yeni ekledigimiz activitye geçmek için int
 Fonksiyonumuzdan yeni ekledigimiz activitye gidecek verinin keyi time, valuesu 5'dir.
 StartActivity içine oluşturdugumuz intenti vererek yeni ekrana geçmiş oluyoruz.
 
+Yeni açtigımız activity için kodları inceleyelim.
+
+```var time = intent.getIntExtra("time", 1)```
+MainActivity2nin içindeki onCreate fonksiyonuna gittigimizde yukarıdaki satırı görecegiz.
+Bir önceki ekrandan yolladıgımız keyi "time" olarak belirledigimiz valueyi getIntExtra() fonksiyonu ile okuyoruz.
+Artık sayacımızın kaç dakika boyunca çalışacagını biliyoruz.
+
+```
+object : CountDownTimer((time * 60 * 1000).toLong(), 1000)
+```
+CountDownTimer 2 adet parametre alır. Birincisi geri sayımı kaçtan başlayacak, ikincisi geri sayım kaçar kaçar azalacak. Bu degerleri milisaniye cinsinden alır.
+
+```
+override fun onTick(millisUntilFinished: Long)
+```
+onTick fonksiyonu CountDownTimer sınıfına aittir. Yukarıdaki CountDownTimer tanımından yola çıkarsak, onTick fonksiyonumuz saniyede bir kez çalışacaktır. millisUntilFinished degişkeni sayesinde timerin bitmesine ne kadar süre kaldıgını görebiliriz.
+
+``` 
+var currentMinute = millisUntilFinished / 60000
+var currentSecond = (millisUntilFinished % 60000) / 1000
+```
+onTick fonksiyonunun içinde saniye ve dakikayı yukarıda görüldügü gibi hesaplıyoruz
+
+Bir diger CountDownTimera ait fonksiyon olan onFinish içinde ise geri sayımımız bitince ne olmasını istiyorsak onu yazıyoruz.
+Geri sayım bitiminde alarm çalması için öncelikle mp3 uzantılı dosyamızı 
+> app > res > raw 
+
+
+
+
+
+
+
 
 Daha sonra MainActivity kısmında kullanıcının hangi yumurtayı seçecegine göre tıklanınca ne olacagı olayları yazdık
 Tıklanılan yumurta ile bir sonraki activity ekranına geçilir ve geçilirken anahtar kelime ile veri gönderilir
