@@ -44,9 +44,14 @@ fun undercooked(view: View){
 ```
     
 Bu fonksiyonun nasıl çalıştığını incelemeden önce ihtiyaçlarımızı belirleyelim. Yumurta seçildikten sonra yeni bir ekran açılması ve seçimimize göre sayaç başlaması gerekmektedir.
-Yeni bir aktivity eklemek için :
+Yeni bir activity eklemek için :
 MainActivitynin bulunduğu klasöre sağ tıklayıp 
 > New > Activity > Gallery 
+Bu adımlardan sonra açılan pencerede **Empty Activity** seçip isim verip finish butonuna bastığımızda yeni boş activity eklemiş oluyoruz.
+Tekrar fonksiyona dönecek olursak, yeni ekledigimiz activitye geçmek için intent tanımladık. Intent tanımlarken içine context ve activitye verdigimiz isim parametrelerini gönderiyoruz. Yeni ekrana geçiş yaparken veri göndermek istersek **intent.putExtra()** fonksiyonunu kullanabiliriz. Gönderecegimiz veriler intent içerisinde key-value şeklinde tutulur.
+Fonksiyonumuzdan yeni ekledigimiz activitye gidecek verinin keyi time, valuesu 5'dir.
+StartActivity içine oluşturdugumuz intenti vererek yeni ekrana geçmiş oluyoruz.
+
 
 Daha sonra MainActivity kısmında kullanıcının hangi yumurtayı seçecegine göre tıklanınca ne olacagı olayları yazdık
 Tıklanılan yumurta ile bir sonraki activity ekranına geçilir ve geçilirken anahtar kelime ile veri gönderilir
