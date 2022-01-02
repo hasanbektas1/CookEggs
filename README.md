@@ -79,7 +79,8 @@ onTick fonksiyonunun içinde saniye ve dakikayı yukarıda görüldügü gibi he
 Bir diger CountDownTimera ait fonksiyon olan onFinish içinde ise geri sayımımız bitince ne olmasını istiyorsak onu yazıyoruz.
 Geri sayım bitiminde alarm çalması için öncelikle mp3 uzantılı dosyamızı 
 > app > res > raw 
-> klasörü içine atıyoruz
+> 
+klasörü içine atıyoruz
 Sonrasında
 ```
 val mediaplayer = MediaPlayer.create(this@MainActivity2, R.raw.alarmmp3)
