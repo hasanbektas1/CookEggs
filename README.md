@@ -47,6 +47,7 @@ Bu fonksiyonun nasıl çalıştığını incelemeden önce ihtiyaçlarımızı b
 Yeni bir activity eklemek için :
 MainActivitynin bulunduğu klasöre sağ tıklayıp 
 > New > Activity > Gallery 
+> 
 Bu adımlardan sonra açılan pencerede **Empty Activity** seçip isim verip finish butonuna bastığımızda yeni boş activity eklemiş oluyoruz.
 Tekrar fonksiyona dönecek olursak, yeni ekledigimiz activitye geçmek için intent tanımladık. Intent tanımlarken içine context ve activitye verdigimiz isim parametrelerini gönderiyoruz. Yeni ekrana geçiş yaparken veri göndermek istersek **intent.putExtra()** fonksiyonunu kullanabiliriz. Gönderecegimiz veriler intent içerisinde key-value şeklinde tutulur.
 Fonksiyonumuzdan yeni ekledigimiz activitye gidecek verinin keyi time, valuesu 5'dir.
