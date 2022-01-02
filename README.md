@@ -66,7 +66,7 @@ CountDownTimer 2 adet parametre alır. Birincisi geri sayımı kaçtan başlayac
 ```
 override fun onTick(millisUntilFinished: Long)
 ```
-onTick fonksiyonu CountDownTimer sınıfına aittir. Yukarıdaki CountDownTimer tanımından yola çıkarsak, onTick fonksiyonumuz saniyede bir kez çalışacaktır. millisUntilFinished degişkeni sayesinde timerin bitmesine ne kadar süre kaldıgını görebiliriz.
+onTick fonksiyonu CountDownTimer sınıfına aittir. Yukarıdaki CountDownTimer tanımından yola çıkarsak, onTick fonksiyonumuz saniyede bir kez çalışacaktır. millisUntilFinished değişkeni sayesinde timerin bitmesine ne kadar süre kaldığını görebiliriz.
 
 ``` 
 var currentMinute = millisUntilFinished / 60000
@@ -85,6 +85,45 @@ val mediaplayer = MediaPlayer.create(this@MainActivity2, R.raw.alarmmp3)
 mediaplayer.start()
 ```
 MediaPlayer.create ile ilk parametrede içinde bulunan activity ekranını, ikinci parametrede yükledigimiz ses dosyasının yolunu yazıyoruz.
+Oluşturulan mediaplayer değişkenini start() edip alarmımızı başlatıyoruz.
+Şimdide başlayan alarmın kaç saniye boyunca çalışmasını belirlemek için kullanılan yöntemimizi inceleyelim.
+
+```
+runnable = object : Runnable
+```
+**Runnable** ile arka planda artarak ilerleyen bir kronometre oluştururuz.
+
+```
+handler.postDelayed(this,1000)
+```
+postDelayed fonksiyonu 2 adet paremetre alır. Birincisi içinde bulunan activity, ikincisi kronometre kaçar kaçar artacak.
+
+Son olarak alarmın durmasını istediğimiz saniyede bildirim ekranını nasıl oluşturuyoruz inceleyelim.
+
+```
+val alert = AlertDialog.Builder(this@MainActivity2)
+alert.setTitle("Finish")
+alert.setMessage("Restart the cooking")
+```
+Yukarıda kod bloğunda AlertDialog.builder ile oluşturdugumuz bildirim ekranının detaylarını görüyoruz.
+Oluşturulan bildirim ekranındaki butonlar ile yapıcaklarımızı aşağıda inceleyelim
+
+```
+alert.setPositiveButton("Yes") {dialog, which ->
+  val intent = Intent(applicationContext, MainActivity::class.java)
+   startActivity(intent)
+}
+```
+alert.setPositiveButton("Yes") butonu ile yeniden bir pişirme başlatmak istendiği durumda intent ile ilk açılan ekranımıza gidiyoruz.
+Yeniden pişirme istenmediği durumda ise "No" butonuna tıklanınca
+```
+finishAffinity()
+```
+yukarıdaki kod yardımı ile programımızı sonlandırıyoruz.
+
+
+
+
 
 
 
