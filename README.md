@@ -11,6 +11,24 @@ Süre bittiğinde 15 sn. boyunca alarm çalar. Alarm bittiğinde ise ekrana uyar
 
 ![deneme](https://github.com/hasanbektas1/CookEggs/blob/master/app/src/main/res/drawable/eggimage.jpeg)
 
+```
+ <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="200dp"
+                android:layout_height="200dp"
+                android:paddingStart="0dp"
+                app:srcCompat="@drawable/eggtime5" />
+            <Button
+                android:id="@+id/under"
+                android:layout_width="200dp"
+                android:layout_height="100dp"
+                android:layout_gravity="center"
+                android:backgroundTint="#C8A31B"
+                android:onClick="undercooked"
+                android:text="5 Minute"
+                android:textSize="25sp"/>
+                ```
+
 
 Yumurta resimlerine göre undercooked 5 Minute, mediumcooked 8 minute, overcooked 12 minute, belirledik
 Daha sonra MainActivity kısmında kullanıcının hangi yumurtayı seçecegine göre tıklanınca ne olacagı olayları yazdık
