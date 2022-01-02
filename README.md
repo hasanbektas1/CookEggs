@@ -43,7 +43,10 @@ fun undercooked(view: View){
     }
 ```
     
-
+Bu fonksiyonun nasıl çalıştığını incelemeden önce ihtiyaçlarımızı belirleyelim. Yumurta seçildikten sonra yeni bir ekran açılması ve seçimimize göre sayaç başlaması gerekmektedir.
+Yeni bir aktivity eklemek için :
+MainActivitynin bulunduğu klasöre sağ tıklayıp 
+> New
 
 Daha sonra MainActivity kısmında kullanıcının hangi yumurtayı seçecegine göre tıklanınca ne olacagı olayları yazdık
 Tıklanılan yumurta ile bir sonraki activity ekranına geçilir ve geçilirken anahtar kelime ile veri gönderilir
