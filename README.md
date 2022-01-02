@@ -30,7 +30,21 @@ Süre bittiğinde 15 sn. boyunca alarm çalar. Alarm bittiğinde ise ekrana uyar
 ```
 
 
-Yumurta resimlerine göre undercooked 5 Minute, mediumcooked 8 minute, overcooked 12 minute, belirledik
+Yumurta resimlerine göre az pişmiş 5 dakika, orta pişmiş 8 dakika ve çok pişmiş 12 dakika olarak belirledik.
+
+Yukarıdaki resimde görüldüğü üzere, Button'a tıklayınca ne olacağını belirledik.
+Yani; Button'ın onClick event'i tetiklendiğinde hangi functionın çalışacağını belirledik.
+```android:onClick="undercooked"```
+```
+fun undercooked(view: View){
+        val intent= Intent(applicationContext,MainActivity2::class.java)
+        intent.putExtra("time",5)
+        startActivity(intent)
+    }
+```
+    
+
+
 Daha sonra MainActivity kısmında kullanıcının hangi yumurtayı seçecegine göre tıklanınca ne olacagı olayları yazdık
 Tıklanılan yumurta ile bir sonraki activity ekranına geçilir ve geçilirken anahtar kelime ile veri gönderilir
 Sonra geçilen activity ekranında gelen anahtar kelimenin verisine göre geri sayımın kaçtan başlatılacagını belirliyoruz
