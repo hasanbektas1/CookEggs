@@ -1,4 +1,4 @@
-# CookEggs
+# CookEggs   ![deneme](https://github.com/hasanbektas1/CookEggs/blob/master/app/src/main/res/drawable/eggimage.jpeg)
 
 Bu proje **Timer**, **Intent**, **Runnable** ve **AlertDialog** kullanılarak geliştirildi.
 
@@ -8,8 +8,6 @@ Süre bittiğinde 15 sn. boyunca alarm çalar. Alarm bittiğinde ise ekrana uyar
 ## Geliştirme Adımları 
 
 Öncelikle activity_main.xml dosyasına 3 adet yumurta resmi ve 3 adet butonumuzu yerleştirdik.
-
-![deneme](https://github.com/hasanbektas1/CookEggs/blob/master/app/src/main/res/drawable/eggimage.jpeg)
 
 ```
  <ImageView
