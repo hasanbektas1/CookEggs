@@ -27,7 +27,7 @@ Süre bittiğinde 15 sn. boyunca alarm çalar. Alarm bittiğinde ise ekrana uyar
                 android:onClick="undercooked"
                 android:text="5 Minute"
                 android:textSize="25sp"/>
-                ```
+```
 
 
 Yumurta resimlerine göre undercooked 5 Minute, mediumcooked 8 minute, overcooked 12 minute, belirledik
