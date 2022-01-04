@@ -125,7 +125,3 @@ finishAffinity()
 ```
 yukarıdaki kod yardımı ile programımızı sonlandırıyoruz.
 
-
-
-Saygılar
-Hasan Bektaş
