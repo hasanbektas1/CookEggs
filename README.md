@@ -1,4 +1,4 @@
-# CookEggs   ![deneme](https://github.com/hasanbektas1/CookEggs/blob/master/app/src/main/res/drawable/eggimage.jpeg)
+# CookEggs   ![Eroor](https://github.com/hasanbektas1/CookEggs/blob/master/app/src/main/res/drawable/eggimage.jpeg)
 
 Bu proje **Timer**, **Intent**, **Runnable** ve **AlertDialog** kullanılarak geliştirildi.
 
